@@ -1,0 +1,18 @@
+<svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main slab -->
+  <rect x="0" y="0" width="160" height="160" fill="#111827"/>
+  <!-- Yellow left bar -->
+  <rect x="0" y="0" width="9" height="160" fill="#EAB308"/>
+  <!-- Yellow bottom bar -->
+  <rect x="0" y="148" width="160" height="12" fill="#EAB308"/>
+  <!-- V -->
+  <polyline points="26,26 72,96 118,26" fill="none" stroke="#ffffff" stroke-width="11" stroke-linecap="square" stroke-linejoin="miter"/>
+  <!-- Divider -->
+  <rect x="22" y="108" width="116" height="2.5" fill="#EAB308" opacity="0.7"/>
+  <!-- C -->
+  <path d="M68,114 A14,14 0 1,0 68,138" fill="none" stroke="#EAB308" stroke-width="7" stroke-linecap="square"/>
+  <!-- I -->
+  <line x1="88" y1="114" x2="108" y2="114" stroke="#ffffff" stroke-width="6" stroke-linecap="square"/>
+  <line x1="98" y1="114" x2="98"  y2="138" stroke="#ffffff" stroke-width="6" stroke-linecap="square"/>
+  <line x1="88" y1="138" x2="108" y2="138" stroke="#ffffff" stroke-width="6" stroke-linecap="square"/>
+</svg>
