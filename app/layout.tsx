@@ -4,16 +4,11 @@ import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
+const jost = Jost({ subsets: ["latin"], variable: "--font-jost" });
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["300", "400"],
-  variable: "--font-cormorant",
-});
-
-const jost = Jost({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-jost",
+  weight: ["300", "400", "500"],
+  variable: "--font-serif",
 });
 
 export const metadata: Metadata = {
@@ -29,10 +24,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${jost.variable} h-full antialiased`}
+      className={`${jost.variable} ${cormorant.variable} h-full scroll-smooth `}
     >
-      <body className="min-h-full flex flex-col ">
-        <link rel="preconnect" href="https://images.unsplash.com" />
+      <body className="min-h-full flex flex-col font-jost antialiased selection:bg-[#A68936] selection:text-white">
         <Navbar />
         {children}
         <Footer />

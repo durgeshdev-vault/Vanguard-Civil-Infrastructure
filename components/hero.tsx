@@ -20,16 +20,25 @@ export default function HeroSection() {
   const [isAnimate, setIsAnimate] = useState(false);
   const [mousePos, setMousePos] = useState({ x: 0.5, y: 0.5 });
   const heroRef = useRef<HTMLDivElement>(null);
+  const heroRect = useRef<{
+    left: number;
+    top: number;
+    width: number;
+    height: number;
+  } | null>(null);
 
   useEffect(() => {
+    if (heroRef.current) {
+      heroRect.current = heroRef.current.getBoundingClientRect();
+    }
+
     const rafId = requestAnimationFrame(() => {
       setIsAnimate(true);
     });
 
     const handleMouse = (e: MouseEvent) => {
-      if (!heroRef.current) return;
-      const { left, top, width, height } =
-        heroRef.current.getBoundingClientRect();
+      if (!heroRect.current) return;
+      const { left, top, width, height } = heroRect.current;
       setMousePos({
         x: (e.clientX - left) / width,
         y: (e.clientY - top) / height,
