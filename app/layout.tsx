@@ -32,6 +32,7 @@ export default function RootLayout({
       className={`${cormorant.variable} ${jost.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col ">
+        <link rel="preconnect" href="https://images.unsplash.com" />
         <Navbar />
         {children}
         <Footer />

@@ -61,7 +61,7 @@ export default function HeroSection() {
         <div
           className="absolute inset-[-5%] bg-cover bg-center will-change-transform brightness-[0.55] grayscale-[0.3] contrast-[1.1]"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1487491424367-7571f9afbb30?q=85&w=1169&auto=format&fit=crop')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1487491424367-7571f9afbb30?q=60&w=800&auto=format,compress&fm=avif')`,
             transform: `translate(${(mousePos.x - 0.5) * 25}px, ${(mousePos.y - 0.5) * 15}px) scale(1.05)`,
             transition: "transform 0.8s cubic-bezier(0.2, 0, 0.2, 1)",
           }}
