@@ -70,12 +70,12 @@ export default function HeroBase() {
         <div className="relative lg:hidden">
           <div className="relative aspect-video overflow-hidden rounded-[2.5rem] shadow-[0_40px_80px_rgba(0,0,0,0.1)] border border-white">
             <Image
-              src="https://images.unsplash.com/photo-1699786192866-09aa8e822a37?q=85&w=1331&auto=format&fit=crop"
-              priority
-              width={800}
-              height={1600}
+              src="https://images.unsplash.com/photo-1699786192866-09aa8e822a37"
               alt="Infrastructure Sovereign"
-              className="w-full h-full object-cover transition-all duration-1000 scale-105"
+              fill
+              className="object-cover transition-all duration-1000 scale-105"
+              sizes="100vw"
+              quality={50}
             />
             <div className="absolute inset-0 bg-linear-to-t from-[#1A1A1A]/70 via-transparent to-transparent" />
 

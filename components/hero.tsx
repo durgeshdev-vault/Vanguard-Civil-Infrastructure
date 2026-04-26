@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import HeroBase from "./herobase";
+import Image from "next/image";
 
 const STATS = [
   { value: "25+", label: "Years of Excellence", detail: "Est. 1999" },
@@ -59,13 +60,22 @@ export default function HeroSection() {
         className="relative flex flex-col overflow-hidden bg-[#E2E2DF] min-h-[110svh] lg:min-h-svh"
       >
         <div
-          className="absolute inset-[-5%] bg-cover bg-center will-change-transform brightness-[0.55] grayscale-[0.3] contrast-[1.1]"
+          className="absolute inset-[-5%] will-change-transform brightness-[0.55] grayscale-[0.3] contrast-[1.1] z-0"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1487491424367-7571f9afbb30?q=60&w=800&auto=format,compress&fm=avif')`,
             transform: `translate(${(mousePos.x - 0.5) * 25}px, ${(mousePos.y - 0.5) * 15}px) scale(1.05)`,
             transition: "transform 0.8s cubic-bezier(0.2, 0, 0.2, 1)",
           }}
-        />
+        >
+          <Image
+            src="https://images.unsplash.com/photo-1487491424367-7571f9afbb30"
+            alt="Engineering Background"
+            fill
+            priority
+            quality={50}
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
 
         <div className="absolute inset-0 z-1">
           <div className="absolute inset-0 bg-linear-to-r from-[#E2E2DF] via-[#E2E2DF]/80 to-transparent w-[60%] lg:w-[50%]" />
