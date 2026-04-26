@@ -124,6 +124,7 @@ export default function HeroBase() {
                 width={800}
                 height={1600}
                 alt="Infrastructure Sovereign"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="w-full h-full object-cover transition-all duration-1000 scale-105"
               />
               <div className="absolute inset-0 bg-linear-to-t from-[#1A1A1A]/70 via-transparent to-transparent" />
